@@ -14,7 +14,7 @@ const SearchExercises = () => {
   useEffect(() => {
     const fetchExerciseData = async () => {
       const bodyPartsData = await fetchData(
-        "https://work-out-api1.p.rapidapi.com/search/Work outs",
+        "https://exercises-by-api-ninjas.p.rapidapi.com/v1/exercises",
         exerciseOptions
       );
 
@@ -27,7 +27,7 @@ const SearchExercises = () => {
   const handleSearch = async () => {
     if (search) {
       const exerciseData = await fetchData(
-        "https://work-out-api1.p.rapidapi.com/search",
+        "https://exercises-by-api-ninjas.p.rapidapi.com/v1/exercises",
         exerciseOptions
       );
       const searchedExercises = exerciseData.filter(
